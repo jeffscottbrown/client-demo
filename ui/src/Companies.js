@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-import {Table, Button, Grid} from 'react-bootstrap';
-import {LinkContainer} from 'react-router-bootstrap';
-// import ConferenceDetailsForm from './ConferenceDetailsForm';
-import FontAwesome from 'react-fontawesome';
-import Time from 'react-time';
+import {Table, Badge, Label, Alert, Grid, Jumbotron} from 'react-bootstrap';
+
 
 import {SERVER_URL} from './conf/config';
 
@@ -35,6 +32,7 @@ class Companies extends Component {
       const renderCompanyRow = company => {
           return (
               <tr key={company.id}>
+                  <td><Badge>{company.id}</Badge></td>
                   <td>{company.name}</td>
               </tr>
           );
@@ -42,11 +40,14 @@ class Companies extends Component {
 
       return (
           <Grid>
-              <h1 className="h2">Companies</h1>
-              <h2>Data received from {this.state.hostName}:{this.state.hostPort}</h2>
-              <Table bordered hover id="companiesTable">
+              <Jumbotron>
+                  <h1>Companies</h1>
+              </Jumbotron>
+              <Alert bsStyle="success"><Label bsStyle="success">Message</Label> Data received from {this.state.hostName}:{this.state.hostPort}</Alert>
+              <Table bordered striped hover id="companiesTable">
                   <thead>
                   <tr>
+                      <th>ID</th>
                       <th>Name</th>
                   </tr>
                   </thead>

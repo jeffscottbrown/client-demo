@@ -6,7 +6,7 @@ import {Nav, Navbar, NavItem} from 'react-bootstrap';
 const MainLayout = ({children}) => {
   return (
     <div>
-      <Navbar >
+      <Navbar className="navbar-inverse">
         <Navbar.Header>
           <Navbar.Brand>
             <img src={logo} alt="OCI/Micronaut" style={{height: 75, padding: 10}}/>
