@@ -3,6 +3,7 @@ import {hashHistory, Route, Router} from 'react-router';
 import MainLayout from './layouts/MainLayout';
 import Companies from './Companies';
 import './App.css';
+import Home from "./Home";
 
 class App extends Component {
     render() {
@@ -10,6 +11,7 @@ class App extends Component {
             <Router history={hashHistory}>
                 <Route component={MainLayout}>
                     <Route path="/companies" component={Companies}/>
+                    <Route path="/" component={Home}/>
                 </Route>
             </Router>
         );

@@ -1,7 +1,7 @@
 package server;
 
-import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Get;
+import io.micronaut.http.HttpResponse;
+import io.micronaut.http.annotation.*;
 
 import java.util.Map;
 
@@ -17,5 +17,17 @@ public class HomeController {
     @Get("/companies")
     public Map companies() {
         return companyClient.getCompanies();
+    }
+
+
+    @Post("/companies")
+    public HttpResponse<Map> save(String name) {
+        return HttpResponse.created(companyClient.saveCompany(name));
+    }
+
+
+    @Delete("/companies/{id}")
+    public HttpResponse delete(long id) {
+        return companyClient.delete(id);
     }
 }

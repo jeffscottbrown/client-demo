@@ -18,6 +18,9 @@ const MainLayout = ({children}) => {
 
 
           <Nav pullRight>
+              <LinkContainer to={{pathname: '/'}}>
+                  <NavItem>Home</NavItem>
+              </LinkContainer>
             <LinkContainer to={{pathname: '/companies'}}>
               <NavItem>Companies</NavItem>
             </LinkContainer>
