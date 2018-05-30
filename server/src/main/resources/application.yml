@@ -11,4 +11,4 @@ consul:
     client:
         registration:
             enabled: false
-    defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
+        defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"

@@ -7,7 +7,7 @@ consul:
   client:
     registration:
       enabled: true
-  defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
+    defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
 ---
 hibernate:
   hbm2ddl:
