@@ -5,10 +5,12 @@ import io.micronaut.http.annotation.Delete;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
 import io.micronaut.http.client.Client;
+import io.micronaut.retry.annotation.Retryable;
 
 import java.util.Map;
 
 @Client("companies")
+@Retryable(delay = "500ms")
 public interface CompanyClient {
 
     @Get("/company")
