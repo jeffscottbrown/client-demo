@@ -12,3 +12,15 @@ consul:
         registration:
             enabled: false
         defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
+---
+micronaut:
+    caches:
+        discovery-client:
+            expireAfterAccess: 5s
+---
+router:
+    static:
+        resources:
+            enabled: true
+            mapping: "/**"
+            paths: "classpath:public"
