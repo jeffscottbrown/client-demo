@@ -77,9 +77,13 @@ class Companies extends Component {
                 <Jumbotron>
                     <h1>Companies</h1>
                 </Jumbotron>
+                <Row>
+                    <Col md={1}>
+                        <Button bsStyle='primary' onClick={this.load}>Reload</Button>
+                    </Col>
+                </Row>
                 <Alert bsStyle="success"><Label bsStyle="success">Message</Label> Data received
                     from {this.state.hostName}:{this.state.hostPort}</Alert>
-
                 <Row>
                     <Col md={8}>
                         <FormControl type="text" value={this.state.newCompanyName}
