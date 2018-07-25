@@ -8,19 +8,19 @@ micronaut:
             enabled: true
 ---
 consul:
-    client:
-        registration:
-            enabled: false
-        defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
+  client:
+    registration:
+      enabled: false
+    defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
 ---
 micronaut:
-    caches:
-        discovery-client:
-            expireAfterAccess: 5s
+  caches:
+    discovery-client:
+      expireAfterAccess: 5s
 ---
 router:
-    static:
-        resources:
-            enabled: true
-            mapping: "/**"
-            paths: "classpath:public"
+  static:
+    resources:
+      enabled: true
+      mapping: "/**"
+      paths: "classpath:public"
