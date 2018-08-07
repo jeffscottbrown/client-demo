@@ -18,9 +18,10 @@ micronaut:
     discovery-client:
       expireAfterAccess: 5s
 ---
-router:
-  static:
-    resources:
-      enabled: true
-      mapping: "/**"
-      paths: "classpath:public"
+micronaut:
+  router:
+    static:
+      resources:
+        enabled: true
+        mapping: "/**"
+        paths: "classpath:public"
