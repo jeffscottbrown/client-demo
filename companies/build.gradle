@@ -9,7 +9,7 @@ buildscript {
     }
 }
 
-version "0.2"
+version "0.4"
 group "companies"
 
 apply plugin:"io.spring.dependency-management"
@@ -26,7 +26,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom 'io.micronaut:bom:1.0.0.M3'
+        mavenBom 'io.micronaut:bom:1.0.0.M4'
     }
 }
 
