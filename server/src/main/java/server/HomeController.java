@@ -2,6 +2,7 @@ package server;
 
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.*;
+import io.micronaut.tracing.annotation.NewSpan;
 
 import java.util.Map;
 
@@ -15,6 +16,7 @@ public class HomeController {
     }
 
     @Get("/companies")
+    @NewSpan("list-companies")
     public Map companies() {
         return companyClient.getCompanies();
     }

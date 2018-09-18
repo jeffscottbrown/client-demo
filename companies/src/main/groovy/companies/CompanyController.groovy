@@ -9,6 +9,7 @@ import io.micronaut.http.annotation.Delete
 import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.Post
 import io.micronaut.runtime.server.EmbeddedServer
+import io.micronaut.tracing.annotation.ContinueSpan
 
 @Controller('/company')
 class CompanyController {
@@ -22,6 +23,7 @@ class CompanyController {
     }
 
     @Get('/')
+    @ContinueSpan
     HttpResponse<ListResponse> index() {
         def companies = companyService.list()
         def response = new ListResponse(companies: companies, hostName: embeddedServer.host, hostPort: embeddedServer.port)

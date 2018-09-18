@@ -10,7 +10,7 @@ buildscript {
     }
 }
 
-version "0.4"
+version "0.5"
 group "server"
 
 apply plugin:"io.spring.dependency-management"
@@ -40,8 +40,15 @@ dependencies {
     compile "io.micronaut:http-server-netty"
     compile "io.micronaut:inject"
     compile "io.micronaut:runtime"
+    compile "io.opentracing.brave:brave-opentracing:0.30.0"
+    compile "io.micronaut:tracing"
+
     compileOnly "io.micronaut:inject-java"
+
     runtime "ch.qos.logback:logback-classic:1.2.3"
+    runtime "io.zipkin.brave:brave-instrumentation-http:4.19.0"
+    runtime "io.zipkin.reporter2:zipkin-reporter:2.5.0"
+
     testCompile "junit:junit:4.12"
     testCompile "io.micronaut:inject-java"
 }

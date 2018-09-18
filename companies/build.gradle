@@ -9,7 +9,7 @@ buildscript {
     }
 }
 
-version "0.4"
+version "0.5"
 group "companies"
 
 apply plugin:"io.spring.dependency-management"
@@ -37,10 +37,17 @@ dependencies {
     compile "io.micronaut:http-client"
     compile "io.micronaut:http-server-netty"
     compile "io.micronaut:runtime-groovy"
+    compile "io.opentracing.brave:brave-opentracing:0.30.0"
+
     compileOnly "io.micronaut:inject-groovy"
+
     runtime "ch.qos.logback:logback-classic:1.2.3"
     runtime "com.h2database:h2:1.4.196"
     runtime "org.apache.tomcat:tomcat-jdbc:8.0.44"
+    compile "io.micronaut:tracing"
+    runtime "io.zipkin.brave:brave-instrumentation-http:4.19.0"
+    runtime "io.zipkin.reporter2:zipkin-reporter:2.5.0"
+
     testCompile "io.micronaut:inject-groovy"
     testCompile("org.spockframework:spock-core:1.1-groovy-2.4") {
         exclude group: "org.codehaus.groovy", module: "groovy-all"

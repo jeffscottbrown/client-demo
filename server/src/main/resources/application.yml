@@ -25,3 +25,11 @@ micronaut:
         enabled: true
         mapping: "/**"
         paths: "classpath:public"
+---
+tracing:
+  zipkin:
+    enabled: true
+    http:
+      url: http://localhost:9411
+      sampler:
+        probability: 0.1
