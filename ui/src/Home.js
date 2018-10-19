@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Grid} from 'react-bootstrap';
 import Jumbotron from "react-bootstrap/es/Jumbotron";
 
 class Home extends Component {
