@@ -6,7 +6,7 @@ plugins {
 apply plugin:"application"
 apply plugin:"groovy"
 
-version "0.5.BUILD-SNAPSHOT"
+version "0.5"
 group "companies"
 
 repositories {
