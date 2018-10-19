@@ -1,13 +1,13 @@
 package companies.init
 
 import companies.CompanyService
-import io.micronaut.context.event.ApplicationEventListener
+import io.micronaut.runtime.event.annotation.EventListener
 import io.micronaut.runtime.server.event.ServerStartupEvent
 
 import javax.inject.Singleton
 
 @Singleton
-class BootStrap implements ApplicationEventListener<ServerStartupEvent> {
+class BootStrap {
 
     final CompanyService companyService
 
@@ -15,8 +15,8 @@ class BootStrap implements ApplicationEventListener<ServerStartupEvent> {
         this.companyService = companyService
     }
 
-    @Override
-    void onApplicationEvent(ServerStartupEvent event) {
+    @EventListener
+    void onStartup(ServerStartupEvent event) {
         if(!companyService.count()) {
             companyService.save 'OCI'
             companyService.save 'Moog'
