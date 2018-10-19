@@ -20,8 +20,8 @@ micronaut:
 ---
 micronaut:
   router:
-    static:
-      resources:
+    static-resources:
+      default:
         enabled: true
         mapping: "/**"
         paths: "classpath:public"
