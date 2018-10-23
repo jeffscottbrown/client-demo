@@ -17,7 +17,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom 'io.micronaut:micronaut-bom:1.0.0.RC3'
+        mavenBom 'io.micronaut:micronaut-bom:1.0.0'
     }
 }
 
@@ -31,8 +31,8 @@ dependencies {
     compile "io.micronaut:micronaut-validation"
     compileOnly "io.micronaut:micronaut-inject-groovy"
     runtime "ch.qos.logback:logback-classic:1.2.3"
-    runtime "com.h2database:h2:1.4.196"
-    runtime "org.apache.tomcat:tomcat-jdbc:8.0.44"
+    runtime "com.h2database:h2"
+    runtime "org.apache.tomcat:tomcat-jdbc"
     testCompile "io.micronaut:micronaut-inject-groovy"
     testCompile("org.spockframework:spock-core:1.2-groovy-2.4") {
         exclude group: "org.codehaus.groovy", module: "groovy-all"
