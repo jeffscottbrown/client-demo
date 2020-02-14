@@ -35,7 +35,7 @@ class CompanyController {
     @Delete('/{id}')
     HttpResponse delete(long id) {
         def company = companyService.get(id)
-        if(!company) {
+        if (!company) {
             return HttpResponse.notFound()
         }
         companyService.delete(company.id)

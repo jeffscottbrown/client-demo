@@ -17,7 +17,7 @@ class BootStrap {
 
     @EventListener
     void onStartup(ServerStartupEvent event) {
-        if(!companyService.count()) {
+        if (!companyService.count()) {
             companyService.save 'OCI'
             companyService.save 'Moog'
             companyService.save 'Tesla'
