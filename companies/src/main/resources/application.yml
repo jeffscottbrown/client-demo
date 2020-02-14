@@ -5,25 +5,19 @@ micronaut:
   server:
     port: -1
 ---
+datasources:
+  default:
+    url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+    schema-generate: CREATE_DROP
+    dialect: H2
+
+
+---
 consul:
   client:
     registration:
       enabled: true
     defaultZone: "${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}"
-
----
-hibernate:
-  hbm2ddl:
-    auto: update
-  cache:
-    queries: false
-    use_second_level_cache: false
-    use_query_cache: false
-    # region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
-dataSource:
-  url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
-  pooled: true
-  jmxExport: true
-  driverClassName: org.h2.Driver
-  username: sa
-  password: ''       

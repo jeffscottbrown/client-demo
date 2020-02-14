@@ -1,5 +1,5 @@
 profile: service
 defaultPackage: companies
 ---
-testFramework: spock
-sourceLanguage: groovy
+testFramework: junit
+sourceLanguage: java
