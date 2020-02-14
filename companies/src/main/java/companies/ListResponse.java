@@ -1,7 +1,9 @@
 package companies;
 
 import companies.model.Company;
+import io.micronaut.core.annotation.Introspected;
 
+@Introspected
 class ListResponse {
     private final Iterable<Company> companies;
     private final String hostName;

@@ -1,10 +1,12 @@
 package companies.model;
 
+import io.micronaut.core.annotation.Introspected;
 import io.micronaut.data.annotation.GeneratedValue;
 import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.MappedEntity;
 
 @MappedEntity
+@Introspected
 public class Company {
     @Id
     @GeneratedValue
