@@ -9,16 +9,16 @@ import io.micronaut.retry.annotation.Retryable;
 
 import java.util.Map;
 
-@Client("companies")
+@Client(value = "companies", path = "/company")
 @Retryable(delay = "500ms")
 public interface CompanyClient {
 
-    @Get("/company")
+    @Get("/")
     Map getCompanies();
 
-    @Post("/company")
+    @Post("/")
     Map saveCompany(String name);
 
-    @Delete("/company/{id}")
+    @Delete("/{id}")
     HttpResponse delete(long id);
 }
