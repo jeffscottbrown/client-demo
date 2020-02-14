@@ -1,7 +1,7 @@
 package companies
 
-import groovy.transform.CompileStatic
 import io.micronaut.runtime.Micronaut
+import groovy.transform.CompileStatic
 
 @CompileStatic
 class Application {
