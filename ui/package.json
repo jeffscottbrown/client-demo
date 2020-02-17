@@ -1,19 +1,44 @@
 {
-  "name": "ui",
+  "name": "Companies",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4",
-    "react-router": "^3.0.5",
-    "react-bootstrap": "^0.31.0",
-    "react-router-bootstrap": "^0.23.3"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "bootstrap-vue": "^2.4.2",
+    "core-js": "^3.6.4",
+    "intersection-observer": "^0.7.0",
+    "regenerator-runtime": "^0.13.3",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
